@@ -1,0 +1,44 @@
+{
+  "name": "markdown-pdf-skill",
+  "version": "1.0.0",
+  "description": "Render Markdown to PDF matching the yzane Markdown-PDF VS Code extension styling, with Mermaid diagrams and embedded charts.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Onsen (https://www.onsenapp.com)",
+  "homepage": "https://github.com/onsen-ai/markdown-pdf-skill#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onsen-ai/markdown-pdf-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/onsen-ai/markdown-pdf-skill/issues"
+  },
+  "keywords": [
+    "markdown",
+    "pdf",
+    "markdown-to-pdf",
+    "markdown-pdf",
+    "yzane",
+    "vscode",
+    "mermaid",
+    "puppeteer",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "md2pdf": "scripts/md2pdf.mjs"
+  },
+  "scripts": {
+    "md2pdf": "node scripts/md2pdf.mjs"
+  },
+  "dependencies": {
+    "highlight.js": "^11.9.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-checkbox": "^1.1.0",
+    "markdown-it-named-headers": "^0.0.4",
+    "mermaid": "^10.9.6",
+    "puppeteer-core": "^22.0.0"
+  }
+}

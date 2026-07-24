@@ -1,0 +1,31 @@
+/*
+ * Table tweaks — layered over the yzane extension CSS (loaded last so it wins the
+ * cascade). Kept separate so the bundled extension stylesheets stay pristine/refreshable.
+ * Horizontal-only rules are preserved (no outer or vertical borders).
+ */
+
+/* Tables one notch smaller than body text (body stays at the extension's 14px). */
+table {
+	font-size: 13px;
+}
+
+/* Code — inline and fenced blocks, everywhere including inside tables — at 12px. The
+ * extension hard-codes 14px and gives inline code `font-size: inherit`, so this needs
+ * !important to win over both consistently. */
+code,
+pre,
+pre code {
+	font-size: 12px !important;
+}
+
+/* Light-gray header background, with a solid black bottom rule. */
+table > thead > tr > th {
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #000;
+}
+
+/* Light-gray horizontal separators between body rows. */
+table > tbody > tr + tr > td,
+table > tbody > tr + tr > th {
+	border-top: 1px solid #bbb;
+}
