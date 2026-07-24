@@ -7,8 +7,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Rendered output (PDFs are generated, not source)
+# Rendered output (PDFs are generated, not source) — except the committed sample preview
 *.pdf
+!examples/sample.pdf
 
 # Environment
 .env
