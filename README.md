@@ -35,16 +35,28 @@ On top of that it:
 
 ## 🚀 Quick Start
 
-```bash
-# 1. Install dependencies (one-off)
-npm install
+### Run it with `npx` (no clone, no install)
 
-# 2. Render the sample
-node scripts/md2pdf.mjs examples/sample.md
-#    → examples/sample.pdf
+```bash
+# render one file  ->  report.pdf next to it
+npx github:onsen-ai/markdown-pdf-skill report.md
+
+# a whole folder, recursively, into one output dir
+npx github:onsen-ai/markdown-pdf-skill ./docs --recursive --out ./pdfs
 ```
 
-That's it. Open `examples/sample.pdf` to see headings, tables, syntax highlighting, a task list, a Mermaid diagram, and an embedded chart — all in the extension's styling.
+`npx` fetches the tool and its dependencies into its cache on first use and runs the `md2pdf` command — nothing is added to your project. All the [options](#-usage) below work the same way. (You still need Node and Chrome — see [Prerequisites](#-prerequisites).)
+
+### Or clone it
+
+```bash
+git clone https://github.com/onsen-ai/markdown-pdf-skill.git
+cd markdown-pdf-skill
+npm install                              # one-off
+node scripts/md2pdf.mjs examples/sample.md   # → examples/sample.pdf
+```
+
+Open [`examples/sample.pdf`](examples/sample.pdf) to see headings, tables, syntax highlighting, a task list, a Mermaid diagram, and an embedded chart — all in the extension's styling.
 
 ## 📖 Usage
 
