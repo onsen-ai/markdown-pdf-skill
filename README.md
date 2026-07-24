@@ -11,6 +11,7 @@ Works as a plain CLI and as a **skill** for AI coding agents — Claude Code, Cu
 ## 📑 Table of Contents
 
 - [✨ What it does](#-what-it-does)
+- [📥 Install as a skill](#-install-as-a-skill)
 - [🚀 Quick Start](#-quick-start)
 - [📖 Usage](#-usage)
 - [🎨 Project overrides](#-project-overrides)
@@ -32,6 +33,31 @@ On top of that it:
 - 🖼️ **Embeds images and charts** referenced by paths relative to the Markdown file, so SVG/PNG assets resolve and print.
 - 📁 **Batch-renders** a single file, a list of files, or whole folders (optionally recursive).
 - 📦 **Downloads no browser** — it drives the Chrome you already have.
+
+## 📥 Install as a skill
+
+Add it to your AI coding agent with the [skills](https://github.com/vercel-labs/skills) CLI:
+
+```bash
+npx skills add onsen-ai/markdown-pdf-skill
+```
+
+Or install globally, for every project:
+
+```bash
+npx skills add onsen-ai/markdown-pdf-skill -g
+```
+
+Target a specific agent explicitly:
+
+```bash
+npx skills add onsen-ai/markdown-pdf-skill -a claude-code
+npx skills add onsen-ai/markdown-pdf-skill -a cursor
+```
+
+The skill is copied into your agent's skills directory (e.g. `~/.claude/skills/`), where it's discovered automatically — the agent reads [`SKILL.md`](SKILL.md) and can render Markdown to PDF on request. See [vercel-labs/skills](https://github.com/vercel-labs/skills) for more install options.
+
+> Prefer to run it as a plain CLI instead? Skip this and see [Quick Start](#-quick-start).
 
 ## 🚀 Quick Start
 
