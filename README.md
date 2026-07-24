@@ -57,6 +57,22 @@ npx skills add onsen-ai/markdown-pdf-skill -a cursor
 
 The skill is copied into your agent's skills directory (e.g. `~/.claude/skills/`), where it's discovered automatically — the agent reads [`SKILL.md`](SKILL.md) and can render Markdown to PDF on request. See [vercel-labs/skills](https://github.com/vercel-labs/skills) for more install options.
 
+> **The `skills` CLI needs Node 20.12+ or 22+.** On Node 18 it fails with `SyntaxError: ... does not provide an export named 'styleText'`. Run the install under a newer Node (`nvm use 20`), or use the manual install below — the skill *itself* runs fine on Node 18+.
+
+### Manual install (no CLI)
+
+Clone straight into your agent's skills directory — works on any Node version:
+
+```bash
+# Claude Code
+git clone https://github.com/onsen-ai/markdown-pdf-skill.git ~/.claude/skills/markdown-to-pdf
+
+# Cursor
+git clone https://github.com/onsen-ai/markdown-pdf-skill.git .cursor/skills/markdown-to-pdf
+```
+
+Most agents discover skills automatically from their skills directory — no extra configuration needed.
+
 > Prefer to run it as a plain CLI instead? Skip this and see [Quick Start](#-quick-start).
 
 ## 🚀 Quick Start
